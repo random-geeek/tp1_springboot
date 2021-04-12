@@ -1,0 +1,111 @@
+get http://localhost:8081/etudiants/
+
+get http://localhost:8081/etudiants/1
+
+get http://localhost:8081/etudiants/1/formation
+
+get http://localhost:8081/fromations
+
+get  http://localhost:8081/fromations/2
+
+get http://localhost:8081/fromations/2/lesEtudiants
+
+
+
+post http://localhost:8081/etudiants
+
+Headers: Content-Type ==> application/json
+
+Body: raw
+{
+    "nom":"karim",
+    "dateN":"1995-10-10",
+    "formation":"http://localhost:8081/formations/2"
+}
+
+
+
+
+Put http://localhost:8081/etudiants/4
+
+Headers: Content-Type ==> application/json
+
+Body: raw
+{
+    "nom":"fouad",
+    "formation":"http://localhost:8083/formations/1"
+}
+
+
+
+Put http://localhost:8081/etudiants/4
+
+Headers: Content-Type ==> application/json
+
+Body: raw
+{
+    "nom":"fouad",
+    "dateN":"1995-10-10",
+    "formation":"http://localhost:8081/formations/1"
+}
+
+
+
+
+Patch http://localhost:8081/etudiants/1
+
+Headers: Content-Type ==> application/json
+
+Body: raw
+{
+   "formation":"http://localhost:8081/formations/2"
+}
+
+
+delete http://localhost:8081/etudiants/4
+
+
+GET   http://localhost:8081/etudiants/search/findEtudiantByNom?n=malki
+
+
+get http://localhost:8081/etudiants?projection=pr1
+
+
+
+get http://localhost:8081/api/etudiant/all
+
+ajouter le @JsonIgnore
+
+get http://localhost:8081/api/etudiant/all
+
+
+
+get http://localhost:8081/api/etudiant/1
+
+
+post http://localhost:8081/api/etudiant?idf=2
+
+Headers: Content-Type ==> application/json
+
+Body: raw
+{
+    "nom":"karim",
+    "dateN":"1995-10-10"
+
+}
+
+POST http://localhost:8081/api/etudiant2
+Headers: Content-Type ==> application/json
+Body: raw
+{
+    "nom":"karim",
+    "dateN":"1995-10-10",
+    "idformation":"1"
+
+}
+
+
+
+
+
+
